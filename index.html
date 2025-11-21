@@ -5,25 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liron Nyambu | Cybersecurity Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #000; }
-    header, footer { background: #000; color: #fff; padding: 1em; text-align: center; }
-    nav a { margin: 0 1em; color: #fff; text-decoration: none; }
-    section { padding: 2em; max-width: 800px; margin: auto; }
-    h1, h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.5em; }
-    .project { margin-bottom: 1.5em; }
-    a.button { background: #000; color: #fff; padding: 0.5em 1em; text-decoration: none; display: inline-block; margin-top: 1em; }
+    :root{--bg:#0f1724;--card:#ffffff;--muted:#6b7280}
+    body { font-family: Inter, Arial, sans-serif; margin: 0; background: linear-gradient(180deg,#f8fafc,#eef2ff); color: #0b1220; }
+    header, footer { background: #071023; color: #fff; padding: 1em; text-align: center; }
+    nav a { margin: 0 0.75em; color: #cfe8ff; text-decoration: none; font-weight:500 }
+    section { padding: 2em; max-width: 900px; margin: auto; }
+    h1, h2 { border-bottom: 1px solid #e6edf8; padding-bottom: 0.5em; }
+    .hero { display:flex; align-items:center; gap:1.5em; flex-wrap:wrap }
+    .hero .intro { max-width:640px }
+    .project { margin-bottom: 1.5em; background: #fff; padding: 1em; border-radius: 10px; box-shadow: 0 2px 10px rgba(11,17,32,0.04) }
+    a.button { background: #071023; color: #fff; padding: 0.6em 1em; text-decoration: none; display: inline-block; margin-top: 1em; border-radius:8px }
     ul.skills-list { list-style: disc; margin-left: 1.5em; }
+    .muted { color: var(--muted) }
+    .tag { display:inline-block; padding:0.25em 0.5em; border-radius:6px; background:#eef2ff; margin-right:0.5em; font-size:0.9em }
+    .experience { margin-bottom:1.25em }
   </style>
 </head>
 <body>
   <header>
     <h1>Liron Nyambu</h1>
-    <p>Aspiring Cybersecurity Analyst</p>
+    <p class="muted">Aspiring Cybersecurity Analyst • Defensive Security & Digital Forensics</p>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-       <a href="#certifications">Certifications</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -31,48 +37,89 @@
 
   <section id="home">
     <h2>Welcome</h2>
-    <p>Hi, I'm Liron, a cybersecurity student passionate about ethical hacking, digital forensics, and securing systems against cyber threats. Explore my work below.</p>
+    <div class="hero">
+      <div class="intro">
+        <p>Hello, I’m <strong>Liron Nyambu</strong>, a driven cybersecurity student and practitioner focused on defensive security, incident response, and digital forensics. I combine practical lab experience (TryHackMe / HackTheBox), forensic training, and real volunteer backend leadership work to build secure, reliable systems and investigate security incidents thoroughly.</p>
+        <p>My goal while studying and volunteering is simple: deliver measurable security value, learn from experienced teams, and grow into an incident responder / forensics investigator who can handle real-world breaches end-to-end.</p>
+      </div>
+    </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am currently pursuing a Diploma in Cybersecurity at Riara University. Previously studied Cybersecurity and Forensic Science at the University of Portsmouth, UK. I focus on network security, ethical hacking, and digital forensics.</p>
+    <p>I am currently pursuing a Diploma in Cybersecurity at Riara University (Year 2.1). I previously studied Cybersecurity &amp; Forensic Science at the University of Portsmouth (UK). My strengths are:</p>
+    <ul class="skills-list">
+      <li>Digital forensics: evidence collection, imaging, memory &amp; disk analysis, reporting and chain-of-custody practices.</li>
+      <li>Defensive security: SOC monitoring, incident triage, vulnerability scanning, and log analysis.</li>
+      <li>Backend engineering and APIs: I lead volunteer backend work and write clean, documented endpoints for production features.</li>
+    </ul>
+    <p class="muted">I am motivated by real impact — I enjoy helping organisations improve security posture and supporting investigations that uncover the root cause of incidents.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience project">
+      <h3>Backend Leader (Volunteer) — Lixnet</h3>
+      <p>Volunteer backend lead responsible for the Tenant &amp; Payment modules.</p>
+      <ul>
+        <li>Built backend logic for Tenant &amp; Payment modules using PHP and Python-compatible approaches.</li>
+        <li>Designed and implemented RESTful API endpoints for CRUD operations and payment workflows.</li>
+        <li>Prepared unit tests, documentation, and deployment-ready configuration for the team.</li>
+      </ul>
+    </div>
+
+    <div class="experience project">
+      <h3>Hackathons &amp; Innovation</h3>
+      <p>Active participant in multiple hackathons where I led development on AI-driven, practical solutions:</p>
+      <ul>
+        <li><strong>Shamba Smart Helper</strong> — An AI-powered smart farm solution that automates crop and livestock monitoring and management using sensors, rule engines and automation. I worked on the system integration and the decision logic for automated actions (feeding, watering, alerts).</li>
+        <li><strong>HeartSync</strong> — A relationship &amp; wellbeing platform with a post-recovery matching component. The app helps users connect with compatible personalities after recovery, includes a red-flag detection feature (users can record their known red flags and the system highlights potential mismatches), and integrates behaviour analysis to surface healthier matches.</li>
+      </ul>
+    </div>
+
+    <div class="experience project">
+      <h3>Forensics &amp; Defensive Cybersecurity Projects</h3>
+      <p>I have completed multiple forensic investigations and defensive security labs including disk &amp; memory analysis, network packet analysis, log forensics, and simulated incident response exercises. I produce clear, actionable reports that non-technical stakeholders can follow.</p>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project">
-      <h3>HeartSync – Relationship Management Web App</h3>
-      <p>
-        HeartSync is a modern relationship management platform designed to help users organize and personalize their connections. Built with Java (Spring Boot) and a clean, responsive UI, it features user authentication, profile customization, and interactive dashboards for adding, editing, and managing relationships. The project focuses on intuitive design, smooth navigation, and future integration of real-time updates and messaging capabilities.
-      </p>
+      <h3>HeartSync – Relationship &amp; Recovery Platform</h3>
+      <p>HeartSync helps users manage relationships and rebuild social connections after emotional recovery. Features include personality-based matching, red-flag detection in user input, profile heuristics to recommend compatible connections, and a privacy-minded architecture.</p>
     </div>
+
+    <div class="project">
+      <h3>Shamba Smart Helper — AI-Powered Farming Assistant</h3>
+      <p>Smart farm prototype that automates crop and livestock tasks using sensor input, scheduled automation and AI-driven recommendations. Built as a hackathon MVP with simulated sensors and rule-based automation for feeding, irrigation and alerts.</p>
+    </div>
+
     <div class="project">
       <h3>Internal Network Vulnerability Scan</h3>
-      <p>Used Nmap and Nikto to identify vulnerabilities in a test environment.</p>
+      <p>Performed simulated vulnerability scans with Nmap and Nikto, identified and documented exploitable services and proposed remediation steps.</p>
     </div>
+
     <div class="project">
-      <h3>Phishing Awareness Campaign</h3>
-      <p>Designed simulation to train users to detect phishing attempts.</p>
+      <h3>Phishing Awareness Simulation</h3>
+      <p>Designed and executed user training simulations to improve phishing detection and reduce click-through rates in a small user group.</p>
     </div>
+
     <div class="project">
-      <h3>Web Application Security Labs</h3>
-      <p>Completed CTFs focused on OWASP Top 10 using TryHackMe and HackTheBox.</p>
+      <h3>Web App Security CTFs</h3>
+      <p>Completed OWASP Top 10 focused CTFs on TryHackMe &amp; HackTheBox, demonstrating practical exploitation and mitigation strategies.</p>
     </div>
   </section>
 
-   <section id="certifications">
+  <section id="certifications">
     <h2>Certifications</h2>
-    <ul>
-      <li>Cisco Introduction to Cybersecurity (Completed)</li>
-      <li>TryHackMe Cyber Defence Pathway (In Progress)</li>
-      <li>Google Cybersecurity Professional Certificate (Planned - Financial aid in progress)</li>
-    </ul>
+    <p class="muted">Certifications are currently in progress. I am actively completing practical pathways and professional certificates to strengthen my defensive and forensics skills.</p>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <p>Download my full resume:</p>
+    <p>Download my full resume (PDF):</p>
     <a href="Liron_Nyambu_Cybersecurity_Resume.pdf" class="button" download>Download Resume (PDF)</a>
   </section>
 
